@@ -105,6 +105,7 @@ class CourseController
                 $this->course->id = $id;
                 $this->course->name = $data->name;
                 $this->course->available_seats = $data->available_seats;
+                $this->course->subjects = $data->subjects;
 
                 $this->course->update();
                 JsonResponse::send(["message" => "Course updated successfully."]);
