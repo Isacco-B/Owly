@@ -32,11 +32,12 @@ class CourseController
                     $subjects = [];
                     if (count($subject_ids) >= 1) {
                         foreach ($subject_ids as $key => $id) {
-                            if (empty($id) || empty($subject_names[$key])) continue;
-                            $subjects[] = [
-                                "id" => $id,
-                                "name" => $subject_names[$key]
-                            ];
+                            if (!empty($id) || !empty($subject_names[$key])) {
+                                $subjects[] = [
+                                    "id" => $id,
+                                    "name" => $subject_names[$key]
+                                ];
+                            };
                         }
                     }
 
