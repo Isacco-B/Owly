@@ -104,7 +104,7 @@ class SubjectController
             if (!empty($id)) {
                 $this->subject->id = $id;
 
-                if($this->subject->delete()) {
+                if ($this->subject->delete()) {
                     JsonResponse::send(["message" => "Subject deleted successfully."]);
                 } else {
                     JsonResponse::send(["message" => "Subject not found."], 404);
