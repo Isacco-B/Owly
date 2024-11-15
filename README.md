@@ -14,6 +14,8 @@
   - Includes a *migrations.sql* file to recreate the database structure.
 - **Security**:
   - Sanitized database queries using PDO to prevent SQL Injection attacks.
+- **Routing**:
+  - Integrated the AltoRouter library to simplify routing.
 
 
 ## Tech Stack Client
